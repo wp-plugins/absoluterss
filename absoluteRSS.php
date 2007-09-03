@@ -4,7 +4,7 @@ Plugin Name: AbsoluteRSS
 Plugin URI: http://robert.accettura.com/projects/absoluterss
 Description: Adjusts your links in RSS to use absolute links so that they work correctly in all feed readers (and validate).  GPL Licensed.
 Author: Robert Accettura
-Version: 1.1
+Version: 1.1.1
 Author URI: http://robert.accettura.com
 License: GPL (http://www.gnu.org/licenses/gpl.txt)
 Copyright (C) 2005-2007 Robert Accettura
@@ -29,8 +29,10 @@ add_filter('the_content', 'absoluteRSS');
 function absoluteRSS($content){
     global $doing_rss;
     if (is_feed() || $doing_rss) {
+        $home = parse_url(get_settings('home'));
+        $home = $home['scheme'].'://'.$home['host'];
         // replace <img src=""/> and <a href=""/> with absolute links
-        return preg_replace( "/<(a|img)(.*?)(href|src)=('|\")\/(.*?)('|\")/is", "<\\1\\2\\3=\"".get_settings('home')."/\\5\"", $content);
+        return preg_replace( "/<(a|img)(.*?)(href|src)=('|\")\/(.*?)('|\")/is", "<\\1\\2\\3=\"".$home."/\\5\"", $content);
     }
     // just return content untouched if it's not a feed
     return $content;
