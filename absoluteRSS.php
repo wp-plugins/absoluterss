@@ -4,7 +4,7 @@ Plugin Name: AbsoluteRSS
 Plugin URI: http://robert.accettura.com/projects/absoluterss
 Description: Adjusts your links in RSS to use absolute links so that they work correctly in all feed readers (and validate).  GPL Licensed.
 Author: Robert Accettura
-Version: 1.1.2
+Version: 1.1.3
 Author URI: http://robert.accettura.com
 License: GPL (http://www.gnu.org/licenses/gpl.txt)
 Copyright (C) 2005-2007 Robert Accettura
