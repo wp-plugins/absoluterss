@@ -1,4 +1,4 @@
-=== RSS Base ===
+=== AbsoluteRSS ===
 
 Contributors: raccettura
 Tags: rss, url, posts
