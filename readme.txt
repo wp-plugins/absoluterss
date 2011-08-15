@@ -2,8 +2,8 @@
 
 Contributors: raccettura
 Tags: rss, url, posts
-Requires at least: 2.0
-Tested up to: 2.5
+Requires at least: 3.2.1
+Tested up to: 3.2.1
 Stable tag: 1.1.3
 
 Adjusts your links in RSS to use absolute links so that they work correctly in all feed readers (and validate). GPL Licensed.
